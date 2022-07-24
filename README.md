@@ -1,4 +1,2 @@
-# git_test
-Local git test
-
-first submit
+# Docker project
+Run Django with Mysql. The code shoule get from Github.
