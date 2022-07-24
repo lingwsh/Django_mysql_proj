@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INFO list</title>
+</head>
+<body>
+
+<table border="1">
+    <thead>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>pass</td>
+        <td>age</td>
+        <td colspan="2">Manage</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for obj in data_list %}
+        <tr>
+            <td>{{ obj.id }}</td>
+            <td>{{ obj.name }}</td>
+            <td>{{ obj.password }}</td>
+            <td>{{ obj.age }}</td>
+            <td>
+                <a href="/info/detail/?id={{ obj.id }}">Edit</a>
+            </td>
+            <td>
+                <a href="/info/delete/?id={{ obj.id }}">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<a href="/info/add_detail/">Add</a>
+</body>
+</html>
